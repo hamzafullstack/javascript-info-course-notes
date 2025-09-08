@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Flashcards | Data Types</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      margin: 10px;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .question {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #444;
+    }
+    .answer {
+      display: none;
+      color: #222;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Flashcards</h1>
+
+  <div class="card" onclick="toggleAnswer(this)">
+    <div class="question">Q: How many primitive types in JS?</div>
+    <div class="answer">A: 7</div>
+  </div>
+
+  <div class="card" onclick="toggleAnswer(this)">
+    <div class="question">Q: What’s the difference between null and undefined?</div>
+    <div class="answer">A: null = intentional empty; undefined = not assigned.</div>
+  </div>
+
+  <div class="card" onclick="toggleAnswer(this)">
+    <div class="question">Q: What does typeof null return?</div>
+    <div class="answer">A: "object" (bug in JS).</div>
+  </div>
+
+  <div class="card" onclick="toggleAnswer(this)">
+    <div class="question">Q: What’s special about BigInt?</div>
+    <div class="answer">A: Allows integers beyond Number limit; written with <code>n</code>.</div>
+  </div>
+
+  <div class="card" onclick="toggleAnswer(this)">
+    <div class="question">Q: Can strings use template literals?</div>
+    <div class="answer">A: Yes, with backticks and <code>${}</code> interpolation.</div>
+  </div>
+
+  <script>
+    function toggleAnswer(card) {
+      const answer = card.querySelector('.answer');
+      answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

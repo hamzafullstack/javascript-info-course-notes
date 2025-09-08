@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson: Variables in JavaScript</title>
+</head>
+<body>
+  <h1>Lesson: Variables</h1>
+
+  <h2>Core Concepts</h2>
+  <p>
+    JavaScript variables act as <strong>named storage</strong> for data—think of them like labeled boxes 
+    where values are kept and can be changed or copied.
+  </p>
+
+  <h2>Declaration & Assignment</h2>
+  <ul>
+    <li>Use <code>let</code> to declare a variable:</li>
+    <pre><code>let message;</code></pre>
+    <li>Assign a value using <code>=</code>, then access using the variable name:</li>
+    <pre><code>message = 'Hello';</code> → <code>alert(message);</code></pre>
+    <li>You can combine declaration and assignment:</li>
+    <pre><code>let message = 'Hello!';</code></pre>
+  </ul>
+
+  <h2>Style & Readability</h2>
+  <ul>
+    <li>Avoid multiple declarations in one line (e.g., <code>let a=1, b=2</code>). Instead:</li>
+    <pre><code>let a = 1;
+let b = 2;</code></pre>
+    <li>Comma-first style exists but is not recommended.</li>
+  </ul>
+
+  <h2>The Old Way: var</h2>
+  <ul>
+    <li><code>var</code> is old-school and block-insensitive—avoid it in modern scripts.</li>
+  </ul>
+
+  <h2>Real-World Analogy</h2>
+  <p>
+    Variables are like boxes with labels—you can put in new values or copy contents to another box.
+  </p>
+
+  <h2>Avoiding Mistakes</h2>
+  <ul>
+    <li>Declaring the same variable twice with <code>let</code> causes an error.</li>
+    <li>Choosing good variable names matters:</li>
+    <ul>
+      <li>Use letters, digits, <code>$</code>, <code>_</code>.</li>
+      <li>Must not start with a digit.</li>
+      <li>Use camelCase for multi-word names.</li>
+      <li>It's case-sensitive (<code>age</code> ≠ <code>Age</code>).</li>
+      <li>Don't use reserved words like <code>let</code>, <code>class</code>, etc.</li>
+    </ul>
+  </ul>
+</body>
+</html>

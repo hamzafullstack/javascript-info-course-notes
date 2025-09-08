@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+  <!-- <p>Before the script...</p> -->
+
+  <!-- <script>
+    alert( 'Hello, world!' );
+  </script> -->
+
+  <!-- <p>...After the script.</p> -->
+
+  <h1>---Notes for javascript.info--</h1>
+<h1>javascript Fundamentals</h1>
+<h2>Hello, world!</h2>
+  <p>This is the first step in learning JavaScript. The script above shows a simple alert box with the message "Hello, world!"</p>
+
+  <p>JavaScript is a versatile programming language that can be used for both client-side and server-side development.</p>
+
+  <p>In this example, we are using an inline script to display a message when the page loads.</p>
+
+  <h2>The “script” tag</h2>
+  <p>
+    JavaScript programs can be inserted almost anywhere into an HTML document using the script tag.
+  The script tag contains JavaScript code which is automatically executed when the browser processes the tag.
+  </p>
+  <h2>Modern markup</h2>
+  <p>
+    The old HTML standard, HTML4, required a script to have a type. Usually it was type="text/javascript". 
+    Its not required anymore. Also, the modern HTML standard totally changed the meaning of this attribute. Now, it can be used for JavaScript modules.
+  </p>
+  <h2>External scripts</h2>
+  <p>
+    If we have a lot of JavaScript code, we can put it into a separate file. Script files are attached to HTML with the src attribute:
+  </p>
+  <h4>here is script js file with src</h4>
+  <script src="helloscript.js"></script>
+  <p>script src="helloscript.js"script</p>
+  <p>
+    The browser loads the script from the specified URL and executes it. This is useful for keeping HTML files clean and separating concerns.
+  </p>
+  <p> We can give a full URL as well. and we can attach several scripts, use multiple tags </p>
+  <h2>Please Note</h2>
+  <p>
+    a rule, only the simplest scripts are put into HTML. More complex ones reside in separate files.
+
+The benefit of a separate file is that the browser will download it and store it in its cache.
+
+Other pages that reference the same script will take it from the cache instead of downloading it, so the file is actually downloaded only once.
+
+That reduces traffic and makes pages faster.
+  </p>
+  <h1>Summary 📚</h1>
+<ul>
+  <li>We can use a script tag to add JavaScript code to a page.</li>
+  <li>The type and language attributes are not required.</li>
+  <li>A script in an external file can be inserted</li>
+  <li>We can use the src attribute to specify the URL of an external script file.</li>
+  <li>External scripts can be cached by the browser, improving performance.</li>
+</ul>
+  
+  <h2> ✅ Tasks </h2>
+  <h3>show an alert</h3>
+  <ul>
+  <h2>-----Task 01-----</h2>
+    <li>Create a page that shows a message “I am JavaScript!”</li>
+    <li>Do it in a sandbox, or on your hard drive, doesn’t matter, just ensure that it works.</li>
+  </ul>
+  <script>
+    alert('I am JavaScript!');
+  </script>
+
+
+      <h2>-----Task 02-----</h2>
+  <h3>Show an alert with an external script</h3>
+  <ul>
+    <li>Take the solution of the previous task Show an alert. Modify it by extracting the script content into an external file alert.js, residing in the same folder.</li>
+    <li>Open the page, ensure that the alert works.</li>
+  </ul>
+  <script src="alert.js"></script>
+
+<h2>Mini Q&A</h2>
+<ol>
+  <li>Do we need type="text/javascript" today? No.</li>
+  <li>Can one script tag have both src and inline code? No; inline is ignored if src exists</li>
+  <li>Why prefer external scripts? Caching + reuse across pages.</li>
+  <li>When does an inline script execute? Exactly when the parser reaches it.</li>
+  <li>Are language and HTML comment hacks inside script still needed? No; obsolete.</li>
+</ol>
+
+</body>
+
+</html>

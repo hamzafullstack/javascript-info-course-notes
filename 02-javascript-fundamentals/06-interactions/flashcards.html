@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Interactions Flashcards</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .flashcard {
+      background: #fff;
+      border-radius: 8px;
+      padding: 15px 20px;
+      margin: 10px 0;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .flashcard:hover {
+      transform: scale(1.02);
+    }
+    .answer {
+      display: none;
+      margin-top: 10px;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🧠 JS Interactions Flashcards</h1>
+
+<div class="flashcard">
+  <p>Q: What does <code>alert()</code> do?</p>
+  <p class="answer">A: Shows a message to the user and waits for them to press "OK". It is modal.</p>
+</div>
+
+<div class="flashcard">
+  <p>Q: How does <code>prompt()</code> work?</p>
+  <p class="answer">A: Asks the user to input text. Syntax: <code>prompt(question, default)</code>. Returns input or null if canceled.</p>
+</div>
+
+<div class="flashcard">
+  <p>Q: What’s the purpose of <code>confirm()</code>?</p>
+  <p class="answer">A: Shows a message with "OK" and "Cancel". Returns true if OK, false if Cancel.</p>
+</div>
+
+<div class="flashcard">
+  <p>Q: Are these functions synchronous or asynchronous?</p>
+  <p class="answer">A: Synchronous (modal). Code execution pauses until the user responds.</p>
+</div>
+
+<div class="flashcard">
+  <p>Q: Can <code>prompt()</code> have a default value?</p>
+  <p class="answer">A: Yes, the second parameter sets the default text. Recommended for IE compatibility.</p>
+</div>
+
+<script>
+  const cards = document.querySelectorAll('.flashcard');
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const ans = card.querySelector('.answer');
+      ans.style.display = ans.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+</body>
+</html>

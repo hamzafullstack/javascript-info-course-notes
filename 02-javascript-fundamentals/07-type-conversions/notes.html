@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS Type Conversion Notes</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f9f9f9;
+    padding: 20px;
+  }
+  h1 { color: #333; }
+  h2 { color: #0077cc; margin-top: 20px; }
+  code { background: #eee; padding: 2px 4px; border-radius: 4px; }
+  .example { background: #fff; padding: 10px; border-left: 4px solid #0077cc; margin: 10px 0; }
+</style>
+</head>
+<body>
+
+<h1>JavaScript Type Conversion Notes</h1>
+
+<h2>1. String Conversion</h2>
+<p>Converts a value to a string.</p>
+<div class="example">
+<code>String(value)</code><br>
+Example:
+<pre>
+let val = true;
+val = String(val); // "true"
+</pre>
+</div>
+
+<h2>2. Number Conversion</h2>
+<p>Converts values to numbers, automatically or explicitly.</p>
+<div class="example">
+Automatic in math operations:
+<pre>
+'6' - '2'; // 4
+'6' / '2'; // 3
+</pre>
+Explicit conversion:
+<pre>
+let str = '123';
+let num = Number(str); // 123
+</pre>
+Rules:
+<ul>
+  <li>undefined → NaN</li>
+  <li>null → 0</li>
+  <li>true / false → 1 / 0</li>
+  <li>Strings with whitespace → trimmed and converted; empty → 0; invalid → NaN</li>
+</ul>
+</div>
+
+<h2>3. Boolean Conversion</h2>
+<p>Values converted to true/false.</p>
+<div class="example">
+Rules:
+<ul>
+  <li>Falsy: 0, "", null, undefined, NaN → false</li>
+  <li>Everything else → true</li>
+</ul>
+Examples:
+<pre>
+Boolean(''); // false
+Boolean('0'); // true
+Boolean(1); // true
+Boolean(0); // false
+Boolean(' '); // true (non-empty string)
+</pre>
+</div>
+
+<h2>4. Summary</h2>
+<ul>
+  <li>Three common conversions: <strong>String, Number, Boolean</strong>.</li>
+  <li>String: output or template literals.</li>
+  <li>Number: math operations or explicit Number(value).</li>
+  <li>Boolean: logical operations or explicit Boolean(value).</li>
+  <li>Always remember conversion rules to avoid NaN or unexpected results.</li>
+</ul>
+
+</

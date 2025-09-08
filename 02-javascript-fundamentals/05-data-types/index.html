@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 5 | Data Types in JavaScript</title>
+</head>
+<body>
+  <h1>Lesson 5: Data Types in JavaScript</h1>
+
+  <h2>JavaScript is Dynamically Typed</h2>
+  <p>Variables can store any type and change type at runtime.</p>
+
+  <h2>Primitive Types (7)</h2>
+  <ul>
+    <li><b>Number</b> – integers & floats. Special values: <code>Infinity</code>, <code>-Infinity</code>, <code>NaN</code>.</li>
+    <li><b>BigInt</b> – integers beyond Number limit. Written with <code>n</code> at end.</li>
+    <li><b>String</b> – text inside quotes. Backticks (<code>`</code>) allow embedding <code>${}</code>.</li>
+    <li><b>Boolean</b> – true/false values.</li>
+    <li><b>Null</b> – intentional “empty” or “unknown”.</li>
+    <li><b>Undefined</b> – variable declared but not assigned.</li>
+    <li><b>Symbol</b> – unique identifiers.</li>
+  </ul>
+
+  <h2>Non-Primitive</h2>
+  <ul>
+    <li><b>Object</b> – collections of data or more complex entities.</li>
+  </ul>
+
+  <h2>typeof Operator</h2>
+  <p>Returns type of a value:</p>
+  <ul>
+    <li><code>typeof 0</code> → "number"</li>
+    <li><code>typeof "hi"</code> → "string"</li>
+    <li><code>typeof Symbol("id")</code> → "symbol"</li>
+    <li><code>typeof null</code> → "object" (bug in JS)</li>
+    <li><code>typeof undefined</code> → "undefined"</li>
+    <li><code>typeof alert</code> → "function"</li>
+  </ul>
+
+  <h2>Concise Summary</h2>
+  <p>JS has 7 primitives (number, bigint, string, boolean, null, undefined, symbol) and 1 main non-primitive (object). <code>typeof</code> helps identify types, but <code>null</code> is misleadingly reported as "object".</p>
+    <script src="datatypes.js"></script>
+    <p><strong>Note:</strong> source code is in datatypes.js</p>
+</body>
+</html>
