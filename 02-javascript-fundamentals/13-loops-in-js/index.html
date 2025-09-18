@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name = "author" content = "Ameer Hamza Bugti" />
+  <title>Loops: while & for | Pocket Chapter</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <main class="container">
+    <header class="hero">
+      <h1>Loops  <small>while · do..while · for</small></h1>
+      <p class="lead">Concise theory, essential examples, and flashcards for fast recall.</p>
+      <p> See notes below.</p>
+    </header>
+
+    <section class="notes">
+      <h2>Core ideas (short)</h2>
+      <ul>
+        <li><strong>while</strong> : check condition before each iteration. Use when iterations depend on runtime condition.</li>
+        <li><strong>do..while</strong> : run body once, then check. Use when body must run at least once.</li>
+        <li><strong>for</strong> : <code>for(begin; condition; step)</code>. Use when iteration count or index control is known.</li>
+        <li><strong>break</strong> : exit loop immediately.</li>
+        <li><strong>continue</strong> : skip current iteration, continue loop.</li>
+        <li><strong>labels</strong> : only use rarely to break outer nested loops (use with care).</li>
+      </ul>
+    </section>
+
+    <section class="must-remember">
+      <h2>Must-remember theory (write these down)</h2>
+      <ol>
+        <li>Infinite loops: <code>while(true)</code> or <code>for(;;)</code>. Use <code>break</code> to stop.</li>
+        <li>Single statement bodies may omit braces — but prefer braces for readability.</li>
+        <li>Loop variable scope: <code>for (let i...)</code> keeps <code>i</code> inside loop.</li>
+        <li><code>continue</code> reduces nesting and improves readability vs deep ifs.</li>
+        <li>Prefer descriptive variable names (index → <code>i</code> ok for simple loops; else use meaningful names).</li>
+      </ol>
+    </section>
+
+    <section class="examples">
+      <h2>Essential examples (copy/paste)</h2>
+
+      <h3>while : basic</h3>
+      <pre><code>// count 0..2
+let i = 0;
+while (i &lt; 3) {
+  console.log(i);
+  i++;
+}</code></pre>
+
+      <h3>do..while : runs once at minimum</h3>
+      <pre><code>let c = 0;
+do {
+  console.log(c);
+  c++;
+} while (c &lt; 3);</code></pre>
+
+      <h3>for : classic counter</h3>
+      <pre><code>for (let d = 0; d &lt; 3; d++) {
+  console.log(d); // 0,1,2
+}</code></pre>
+
+      <h3>skip with continue</h3>
+      <pre><code>for (let n = 0; n &lt; 10; n++) {
+  if (n % 2 === 0) continue;
+  console.log(n); // 1,3,5...
+}</code></pre>
+
+      <h3>break from nested (label)</h3>
+      <pre><code>outer:
+for (let x = 0; x &lt; 3; x++) {
+  for (let y = 0; y &lt; 3; y++) {
+    if (needToStop()) break outer;
+  }
+}</code></pre>
+
+    </section>
+
+    <section class="flashcards">
+      <h2>Flashcards : click to flip</h2>
+      <div class="cards">
+        <button class="card" data-q="while: when to use?" data-a="Use when loop depends on a condition checked each iteration (unknown count).">while: when to use?</button>
+
+        <button class="card" data-q="do..while: difference?" data-a="Body runs once before the condition is tested; good for prompting then validating.">do..while: difference?</button>
+
+        <button class="card" data-q="for: syntax?" data-a="<code>for(begin; condition; step)</code>. Good for counted loops.">for: syntax?</button>
+
+        <button class="card" data-q="continue vs break?" data-a="continue → skip iteration; break → exit loop entirely.">continue vs break?</button>
+      </div>
+    </section>
+
+    
+     
+    <footer class="foot">
+      <p>Reference: https://javascript.info/while-for (read full notes).<br>Made for quick revision.</p>
+    </footer>
+  </main>
+
+  <!-- Tiny JS only for flashcards (flip/toggle content). Minimal, accessible. -->
+  <script>
+    document.querySelectorAll('.card').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const q = btn.getAttribute('data-q');
+        const a = btn.getAttribute('data-a');
+        if (btn.classList.contains('flipped')) {
+          btn.innerHTML = q;
+          btn.classList.remove('flipped');
+        } else {
+          btn.innerHTML = a;
+          btn.classList.add('flipped');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
